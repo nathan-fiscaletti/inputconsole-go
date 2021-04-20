@@ -25,7 +25,9 @@ import(
 func main() {
     console := inputconsole.NewInputConsole()
 
-    // Register a command
+    // Register a command.
+    // Runtime exceptions caused by commands are automatically caught
+    // and an error message will be written to the inputconsole.
     console.RegisterCommand("help", func(params []string) {
         console.Writef("I don't want to help you %s", params[0])
     })
