@@ -36,7 +36,7 @@ func main() {
 
     // Set unknown command handler, Return 'true' for command handled
     // or 'false' for command not handled.
-    console.SetUnknownCommandHandler(func(command) bool {
+    console.SetUnknownCommandHandler(func(command string) bool {
         console.Writef("Unknown command: %s\n", command)
         return true
     })
